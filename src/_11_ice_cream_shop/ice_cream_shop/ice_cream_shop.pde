@@ -1,11 +1,11 @@
 void setup(){
      size(500,500);
      //call the makeIceCreamCone() method below to make an ice cream cone
-
+makeIceCreamCone();
      //use the addScoop method below to add as many scoops of ice cream as you want
-
+addScoop("ydet");
      //Use the method to add sprinkles to your ice cream
-
+addSprinkle(99999);
      //Write code to add a cherry to the top of your ice cream. hint: ellipse
 
 }
@@ -27,8 +27,15 @@ void makeIceCreamCone(){
 //Don't touch this method; call it!!!
 void addScoop(String flavor){
      noStroke();
+
      if(flavor.equalsIgnoreCase("chocolate")){
          fill(116,71,16);
+     }
+       else if(flavor.equalsIgnoreCase("poop")){
+         fill(#865555);
+     } 
+        else if(flavor.equalsIgnoreCase("ydet")){
+         fill(#B7EFFF);
      }
      else if(flavor.equalsIgnoreCase("Strawberry")){
          fill( 232 ,144,129);
@@ -36,7 +43,7 @@ void addScoop(String flavor){
      else if(flavor.equalsIgnoreCase("Vanilla")){
          fill(245, 243, 227);
      } else{
-         println("ERROR: We don't have the flavor "+ flavor); 
+         println("ERROR: We don't have the flavor, SO LEAVE NOW OR DIE "+ flavor); 
          return;
      }
      ellipse(width/2,coneY - 50 - (SCOOPSIZE*scoops)/2,SCOOPSIZE,SCOOPSIZE);
